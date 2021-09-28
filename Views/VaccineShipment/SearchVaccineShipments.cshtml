@@ -1,0 +1,115 @@
+﻿@model SearchVaccineShipmentsViewModel
+@{
+    ViewData["Title"] = "SearchVaccineShipments";
+}
+
+<h1>SearchVaccineShipments (all inputs are optional)</h1>
+<form asp-controller="VaccineShipment" asp-action="SearchVaccineShipments" method="post">
+
+    <div class="form-group">
+        <label>Shipment Date should be after</label>
+        <input asp-for="StartDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Shipment Date should be before</label>
+        <input asp-for="EndDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Choose Vaccine type</label>
+        <select asp-for="VaccineID" class="form-control">
+            <option value="None"></option>
+            <option value="Pfizer"></option>
+            <option value="Moderna"></option>
+            <option value="Johnson & Johnson"></option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Choose Facility type</label>
+        <select asp-for="FacilityID" asp-items="ViewBag.AllFacilities" class="form-control">
+            <option value="">None </option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@if (Model.ResultListOfVaccineShipments != null)
+{
+    @if (Model.ResultListOfVaccineShipments.Any())
+    {
+        <h1>ListAllVaccineShipments</h1>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+
+        @*<table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Start Date
+                            </th>
+                            <th>
+                                End Date
+                            </th>
+                            <th>
+                                Number of Vaccines shipped
+                            </th>
+                            <th>
+                                Number of Vaccines used
+                            </th>
+                            <th>
+                                Facility Name
+                            </th>
+                            <th>
+                                Vaccine Name
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (VaccineShipment eachVaccineShipment in Model.ResultListOfVaccineShipments)
+                        {
+                            <tr>
+                                <td>
+                                    @eachVaccineShipment.StartDate.ToShortDateString()
+                                </td>
+                                <td>
+                                    @if (eachVaccineShipment.EndDate.HasValue)
+                                    {
+                                        @eachVaccineShipment.EndDate.Value.ToShortDateString();
+                                    }
+                                    else
+                                    {
+                                        @("No end Date")
+                                    }
+                                </td>
+                                <td>
+                                    @eachVaccineShipment.NumberOfVaccinesShipped
+                                </td>
+                                <td>
+                                    @eachVaccineShipment.NumberOfVaccinesUsed
+                                </td>
+                                <td>
+                                    @eachVaccineShipment.Facility.FacilityName
+                                </td>
+                                <td>
+                                    @eachVaccineShipment.Vaccine.Name
+                                </td>
+                            </tr>
+                        }
+                </tbody>
+            </table>*@
+
+        <partial name="VaccineShipments_PartialView" model="Model.ResultListOfVaccineShipments" />
+
+
+    }
+    else
+    {
+        <h4>No vaccine shipments meet your search criteria</h4>
+    }
+}

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WestfallClassLibrary.Facility">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAACQACAACAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Facility.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FacilityAdmin" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="VaccineShipmentsToFacility" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WestfallClassLibrary.ApplicationUser" Collapsed="true">
+    <Position X="1" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WestfallClassLibrary.FacilityAdmin">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FacilityAdmin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Facility" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WestfallClassLibrary.Patient" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAI=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WestfallClassLibrary.Vaccine">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAQCgAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Vaccine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="VaccineShipments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WestfallClassLibrary.VaccineShipment">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAAAAAAAAAAAACAAAggAAAAAAAAEAAEEAEAAA=</HashCode>
+      <FileName>VaccineShipment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vaccine" />
+      <Property Name="Facility" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

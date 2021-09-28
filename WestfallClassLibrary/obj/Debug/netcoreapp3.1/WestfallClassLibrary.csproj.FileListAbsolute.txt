@@ -1,0 +1,9 @@
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.csprojAssemblyReference.cache
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.AssemblyInfo.cs
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\bin\Debug\netcoreapp3.1\WestfallClassLibrary.deps.json
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\bin\Debug\netcoreapp3.1\WestfallClassLibrary.dll
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\bin\Debug\netcoreapp3.1\WestfallClassLibrary.pdb
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.dll
+C:\Users\Dalton\Source\Repos\SP21WestfallApp\WestfallAppSolution\WestfallClassLibrary\obj\Debug\netcoreapp3.1\WestfallClassLibrary.pdb

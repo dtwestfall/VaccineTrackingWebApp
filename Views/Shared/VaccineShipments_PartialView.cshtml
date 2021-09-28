@@ -1,0 +1,67 @@
+﻿
+<p>
+    <a asp-action="AddVaccineShipment"> Add Vaccine Shipment</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+            <th>
+                Number of Vaccines shipped
+            </th>
+            <th>
+                Number of Vaccines used
+            </th>
+            <th>
+                Facility Name
+            </th>
+            <th>
+                Vaccine Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VaccineShipment eachVaccineShipment in Model)
+        {
+            <tr>
+                <td>
+                    @eachVaccineShipment.StartDate.ToShortDateString()
+                </td>
+                <td>
+                    @if (eachVaccineShipment.EndDate.HasValue)
+                    {
+                        @eachVaccineShipment.EndDate.Value.ToShortDateString();
+                    }
+                    else
+                    {
+                        @("No end Date")
+                    }
+                </td>
+                <td>
+                    @eachVaccineShipment.NumberOfVaccinesShipped
+                </td>
+                <td>
+                    @eachVaccineShipment.NumberOfVaccinesUsed
+                </td>
+                <td>
+                    @eachVaccineShipment.Facility.FacilityName
+                </td>
+                <td>
+                    @eachVaccineShipment.Vaccine.Name
+                </td>
+                @*@<td>
+                        <a asp-action="Edit" asp-route-id="@item.VaccineShipmentID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.VaccineShipmentID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.VaccineShipmentID">Delete</a>
+                    </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
